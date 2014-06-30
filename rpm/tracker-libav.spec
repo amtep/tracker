@@ -146,7 +146,8 @@ chmod +x tests/functional-tests/create-tests-xml.py
     --enable-generic-media-extractor=libav \
     --disable-enca \
     --disable-journal \
-    --enable-libgif
+    --enable-libgif \
+    "CFLAGS=$CFLAGS -O0"
 
 make %{?jobs:-j%jobs}
 
